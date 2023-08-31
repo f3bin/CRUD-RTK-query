@@ -1,6 +1,9 @@
 .non-active-container {
      width: 60vw;
      margin: 0px auto;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
      table {
        width: 100%;
        border-collapse: collapse;

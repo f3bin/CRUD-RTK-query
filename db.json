@@ -1,0 +1,88 @@
+{
+  "users": [
+    {
+      "id": 23,
+      "name": "Jerin",
+      "birthDate": "2019-02-14",
+      "status": "active"
+    },
+    {
+      "id": 24,
+      "name": "Jeny",
+      "birthDate": "2023-07-14",
+      "status": "active"
+    },
+    {
+      "id": 25,
+      "name": "Johnson",
+      "birthDate": "1998-06-12",
+      "status": "active"
+    },
+    {
+      "id": 26,
+      "name": "Olivia john",
+      "birthDate": "2003-04-20",
+      "status": "active"
+    },
+    {
+      "id": 27,
+      "name": "Emily",
+      "birthDate": "1995-09-10",
+      "status": "active"
+    },
+    {
+      "id": 28,
+      "name": "Daniel",
+      "birthDate": "1987-12-03",
+      "status": "active"
+    },
+    {
+      "id": 29,
+      "name": "Sophia",
+      "birthDate": "2001-03-25",
+      "status": "active"
+    },
+    {
+      "id": 30,
+      "name": "Liam",
+      "birthDate": "1990-08-18",
+      "status": "active"
+    },
+    {
+      "id": 31,
+      "name": "Ava",
+      "birthDate": "2005-11-07",
+      "status": "active"
+    },
+    {
+      "id": 32,
+      "name": "Noah",
+      "birthDate": "1993-04-30",
+      "status": "active"
+    },
+    {
+      "id": 33,
+      "name": "Isabella",
+      "birthDate": "2009-02-22",
+      "status": "active"
+    },
+    {
+      "id": "03e4cf07-e053-4864-af96-fe63a93671ff",
+      "name": "akash pv ",
+      "birthDate": "2019-06-22",
+      "status": "non-active"
+    },
+    {
+      "id": "43b4d361-e280-4d12-a7e7-7b39d27b926a",
+      "name": "hrithik ",
+      "birthDate": "2023-08-01",
+      "status": "non-active"
+    },
+    {
+      "id": "1860f5c4-4a43-48fa-9d86-390c0531fe44",
+      "name": "febin",
+      "birthDate": "2002-06-20",
+      "status": "non-active"
+    }
+  ]
+}

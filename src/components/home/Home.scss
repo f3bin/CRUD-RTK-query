@@ -1,0 +1,96 @@
+$user-table-bg: #f2f2f2;
+$button-bg: #3498db;
+
+.Home {
+     width: 100vw;
+     margin: 0px auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+
+     .home-body {
+          width: 90%;
+          margin-left: 50px;
+          display: flex;
+          justify-content:center;
+          gap: 40px;
+
+          .user-table {
+               width: 60%;
+               border-collapse: collapse;
+               margin-bottom: 20px;
+
+               th,
+               td {
+                    border: 1px solid #ccc;
+                    padding: 8px;
+                    text-align: center;
+               }
+
+               th {
+                    background-color: $user-table-bg;
+               }
+
+               tr:nth-child(even) {
+                    background-color: $user-table-bg;
+               }
+
+               button {
+                    background-color: $button-bg;
+                    color: white;
+                    border: none;
+                    padding: 5px 10px;
+                    cursor: pointer;
+
+                    &:hover {
+                         background-color: darken($button-bg, 10%);
+                    }
+               }
+          }
+
+          .input-form {
+               margin-top: 30px;
+               display: flex;
+               flex-direction: column;
+               gap: 10px;
+               width: 200px;
+               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+               height: fit-content;
+               padding:25px;
+
+               label {
+                    font-weight: bold;
+               }
+
+               input[type="text"],
+               input[type="date"] {
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 14px;
+               }
+
+               .create-button {
+                    background-color: blue;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    cursor: pointer;
+               }
+
+               .update-button {
+                    background-color: green;
+                    color: white;
+                    border: none;
+                    padding: 8px 12px;
+                    border-radius: 4px;
+                    font-size: 14px;
+                    cursor: pointer;
+               }
+
+          }
+     }
+}

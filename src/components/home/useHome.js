@@ -4,13 +4,15 @@ import {
      useEditUserMutation,
      useGetAllUsersQuery,
      useHideUserMutation,
+     userApi,
 } from "../../redux/queries/userApi";
 import { useDeleteUserMutation } from "../../redux/queries/userApi";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { useDispatch } from "react-redux";
 const useHome = () => {
-
-     const { data: users, isLoading, refetch, isError } = useGetAllUsersQuery();
+     const dispatch = useDispatch();
+     const { data: users, isLoading, refetch, isError } = useGetAllUsersQuery({});
      const [deleteUser] = useDeleteUserMutation();
      const [addUser] = useAddUserMutation();
      const [editUser] = useEditUserMutation();
@@ -26,12 +28,14 @@ const useHome = () => {
 
      //handling Hiding user
      const handleHideUser = (user) => {
-         hideUser({...user,status:"non-active"}).then((res)=>{
-          if(res){
-               refetch();
-          }
-         })
-        };
+          hideUser({ ...user, status: "non-active" }).then((res) => {
+               if (res) {
+                    // refetch();
+                    dispatch(userApi.util.invalidateTags(['User']))
+               }
+          })
+     };
+
 
      //handling delete onClick
      const handleDeleteUser = (id) => {

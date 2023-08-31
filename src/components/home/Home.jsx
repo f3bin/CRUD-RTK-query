@@ -26,7 +26,7 @@ function Home() {
               <th>Name</th>
               <th>Birth Date</th>
               <th>Edit</th>
-              <th>Delete</th>
+              <th>Hide</th>
             </tr>
           </thead>
           <tbody>

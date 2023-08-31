@@ -6,7 +6,6 @@ function Home() {
     isLoading,
     isError,
     isSubmit,
-    handleDeleteUser,
     handleHideUser,
     handleEditUser,
     handleSubmit,

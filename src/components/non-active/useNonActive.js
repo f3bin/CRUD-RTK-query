@@ -5,7 +5,7 @@ import {
 } from "../../redux/queries/userApi";
 const useNonActive = () => {
 
-     const { data: users, isLoading, isError, refetch } = useGetAllUsersQuery();
+      const { data: users, isLoading, isError, refetch } = useGetAllUsersQuery();
      const [deleteUser] = useDeleteUserMutation();
 
      const handleDelete = (id) => {

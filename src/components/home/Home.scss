@@ -9,11 +9,16 @@ $button-bg: #3498db;
      justify-content: center;
      align-items: center;
 
+     button {
+          margin-bottom: 10px;
+          cursor: pointer;
+     }
+
      .home-body {
           width: 90%;
           margin-left: 50px;
           display: flex;
-          justify-content:center;
+          justify-content: center;
           gap: 40px;
 
           .user-table {
@@ -55,9 +60,9 @@ $button-bg: #3498db;
                flex-direction: column;
                gap: 10px;
                width: 200px;
-               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+               box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                height: fit-content;
-               padding:25px;
+               padding: 25px;
 
                label {
                     font-weight: bold;

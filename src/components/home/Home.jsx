@@ -9,16 +9,20 @@ function Home() {
     handleHideUser,
     handleEditUser,
     handleSubmit,
+    handleShowList,
     state,
     setState,
     users,
   } = useHome();
 
+  console.log(users,"userssss");
+
   return (
     <div className="Home">
       {isLoading && <p>Loading..</p>}
       {isError && <p>Error while rendering</p>}
-      <h1>Active Users</h1>
+      <h1>Active Users</h1> 
+      <button onClick={handleShowList}>Show Active Users</button>
       <div className="home-body">
         <table className="user-table">
           <thead>

@@ -16,7 +16,7 @@
       "id": 29,
       "name": "Sophia",
       "birthDate": "2001-03-25",
-      "status": "active"
+      "status": "non-active"
     },
     {
       "id": 30,
@@ -94,7 +94,7 @@
       "id": 42,
       "name": "Benjamin",
       "birthDate": "1995-04-17",
-      "status": "active"
+      "status": "non-active"
     },
     {
       "id": 43,
@@ -136,12 +136,6 @@
       "id": 51,
       "name": "Matthew",
       "birthDate": "1996-10-11",
-      "status": "non-active"
-    },
-    {
-      "id": 52,
-      "name": "Lily",
-      "birthDate": "2011-07-02",
       "status": "non-active"
     },
     {

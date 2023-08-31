@@ -10,9 +10,11 @@ import { useDeleteUserMutation } from "../../redux/queries/userApi";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { useDispatch } from "react-redux";
+
 const useHome = () => {
      const dispatch = useDispatch();
-     const { data: users, isLoading, refetch, isError } = useGetAllUsersQuery({});
+     const [value,setValue]= useState(true);
+     const { data: users, isLoading, refetch, isError } = useGetAllUsersQuery({},{skip:value});
      const [deleteUser] = useDeleteUserMutation();
      const [addUser] = useAddUserMutation();
      const [editUser] = useEditUserMutation();
@@ -30,12 +32,16 @@ const useHome = () => {
      const handleHideUser = (user) => {
           hideUser({ ...user, status: "non-active" }).then((res) => {
                if (res) {
-                    // refetch();
-                    dispatch(userApi.util.invalidateTags(['User']))
+                    refetch();
+                    // dispatch(userApi.util.invalidateTags(['User']))
                }
           })
      };
 
+     //button onclick to show the list
+     const handleShowList = () => {
+        setValue(false)
+     }    
 
      //handling delete onClick
      const handleDeleteUser = (id) => {
@@ -98,7 +104,7 @@ const useHome = () => {
           }
      };
 
-     return { isLoading, isError, isSubmit, handleDeleteUser, handleEditUser, handleHideUser, handleSubmit, state, setState, users }
+     return { isLoading, isError, isSubmit, handleDeleteUser, handleEditUser, handleShowList, handleHideUser, handleSubmit, state, setState, users }
 }
 
 export default useHome

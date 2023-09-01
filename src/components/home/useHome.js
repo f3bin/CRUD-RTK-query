@@ -7,13 +7,14 @@ import {
      userApi,
 } from "../../redux/queries/userApi";
 import { useDeleteUserMutation } from "../../redux/queries/userApi";
-import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useDispatch ,useSelector } from "react-redux";
+import {skipValueChange} from "../../redux/skipSlice";
 
 const useHome = () => {
      const dispatch = useDispatch();
-     const [value,setValue]= useState(true);
+    const value = useSelector(state => state.skip.skip);
      const { data: users, isLoading, refetch, isError } = useGetAllUsersQuery({},{skip:value});
      const [deleteUser] = useDeleteUserMutation();
      const [addUser] = useAddUserMutation();
@@ -40,7 +41,7 @@ const useHome = () => {
 
      //button onclick to show the list
      const handleShowList = () => {
-        setValue(false)
+        dispatch(skipValueChange(false))
      }    
 
      //handling delete onClick

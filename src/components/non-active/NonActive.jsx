@@ -4,11 +4,10 @@ import "./NonActive.scss";
 import useNonActive from "./useNonActive";
 
 const NonActive = () => {
- const {handleDelete,users,isLoading,isError} =useNonActive();
+ const {handleDelete,users,isLoading,isError ,} =useNonActive();
   return (
     <div className="non-active-container">
-      {isLoading && <h3>Loading...</h3>}
-      {isError && <h3>Error fetching data</h3>}
+     
       <h1>Non Active Users</h1>
       <table>
         <tr>

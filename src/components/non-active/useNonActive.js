@@ -15,7 +15,7 @@ const useNonActive = () => {
                }
           });
      };
-     return { handleDelete, users, isLoading, isError }
+     return { handleDelete, users, isLoading, isError, }
 }
 
 export default useNonActive

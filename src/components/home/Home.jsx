@@ -19,8 +19,6 @@ function Home() {
 
   return (
     <div className="Home">
-      {isLoading && <p>Loading..</p>}
-      {isError && <p>Error while rendering</p>}
       <h1>Active Users</h1> 
       <button onClick={handleShowList}>Show Active Users</button>
       <div className="home-body">
